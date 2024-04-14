@@ -1,6 +1,8 @@
 package com.celiabilal.projectsport.services;
 
-@javax.ejb.Stateless(name = "PathologyRepositoryEJB")
+import jakarta.ejb.Stateless;
+
+@Stateless(name = "PathologyRepositoryEJB")
 public class PathologyRepositoryBean {
     public PathologyRepositoryBean() {
     }

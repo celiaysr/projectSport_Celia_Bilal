@@ -1,6 +1,8 @@
 package com.celiabilal.projectsport.services;
 
-@javax.ejb.Stateless(name = "DisciplineRepositoryEJB")
+import jakarta.ejb.Stateless;
+
+@Stateless(name = "DisciplineRepositoryEJB")
 public class DisciplineRepositoryBean {
     public DisciplineRepositoryBean() {
     }

@@ -1,6 +1,8 @@
 package com.celiabilal.projectsport.services;
 
-@javax.ejb.Stateless(name = "GenreRepositoryEJB")
+import jakarta.ejb.Stateless;
+
+@Stateless(name = "GenreRepositoryEJB")
 public class GenreRepositoryBean {
     public GenreRepositoryBean() {
     }
