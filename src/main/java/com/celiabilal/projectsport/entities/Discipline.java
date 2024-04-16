@@ -1,12 +1,10 @@
 package com.celiabilal.projectsport.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "discipline")
 public class Discipline {
 
     @Id

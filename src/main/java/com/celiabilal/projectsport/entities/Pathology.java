@@ -1,13 +1,11 @@
 package com.celiabilal.projectsport.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.nio.file.Path;
 import java.util.List;
 
 @Entity
+@Table(name = "pathology")
 public class Pathology {
 
     @Id

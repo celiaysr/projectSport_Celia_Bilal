@@ -7,6 +7,7 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
+@Table(name = "therapeutic")
 public class Therapeutic {
 
     @Id
