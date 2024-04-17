@@ -1,7 +1,7 @@
 package com.celiabilal.projectsport.entities;
 
-import javax.persistence.*;
-import java.nio.file.Path;
+import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity
@@ -9,6 +9,7 @@ import java.util.List;
 public class Pathology {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "name")

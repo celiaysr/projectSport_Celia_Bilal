@@ -1,9 +1,9 @@
 package com.celiabilal.projectsport.entities;
 
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import org.springframework.boot.convert.DataSizeUnit;
 
-import javax.persistence.*;
-import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -11,6 +11,7 @@ import java.util.List;
 public class Therapeutic {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @OneToOne(targetEntity = User.class)

@@ -1,6 +1,7 @@
 package com.celiabilal.projectsport.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity
@@ -8,6 +9,7 @@ import java.util.List;
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
     @Column(name = "username")
@@ -31,6 +33,7 @@ public class User {
 
     @OneToOne(targetEntity = Therapeutic.class)
     private Therapeutic therapeutic;
+
 
     public User(){}
 

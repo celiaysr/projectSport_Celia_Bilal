@@ -1,6 +1,7 @@
 package com.celiabilal.projectsport.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity
@@ -8,6 +9,7 @@ import java.util.List;
 public class Activity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "name")
