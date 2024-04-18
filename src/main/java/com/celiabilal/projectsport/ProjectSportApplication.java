@@ -7,8 +7,8 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EntityScan(basePackages = {"com.celiabilal.projectsport.entities"})  // force scan JPA entities
-@ComponentScan(basePackages = {"com.celiabilal.projectsport.repositories"})
+//@EntityScan(basePackages = {"com.celiabilal.projectsport.entities"})  // force scan JPA entities
+@ComponentScan(basePackages = {"com.celiabilal.projectsport.repositories", "com.celiabilal.projectsport.controller"})
 public class ProjectSportApplication {
 
     public static void main(String[] args) {
@@ -16,3 +16,4 @@ public class ProjectSportApplication {
     }
 
 }
+
