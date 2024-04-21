@@ -9,7 +9,7 @@
 <body>
 <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" th:href="@{/}">
             <img th:src="@{/images/projectLogoSport.png}" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,8 +31,8 @@
                         </svg>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Se connecter</a></li>
-                        <li><a class="dropdown-item" href="#">S'inscrire</a></li>
+                        <li><a class="dropdown-item"  th:href="@{/login}">Se connecter</a></li>
+                        <li><a class="dropdown-item"  th:href="@{/register}">S'inscrire</a></li>
                     </ul>
                 </li>
             </ul>
