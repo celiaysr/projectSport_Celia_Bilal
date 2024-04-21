@@ -14,10 +14,11 @@ public class Therapeutic {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @OneToOne(targetEntity = User.class)
+    @OneToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToMany(mappedBy = "therapeutic",targetEntity = Activity.class)
+    @ManyToMany(mappedBy = "therapeutics",targetEntity = Activity.class)
     @Size(max = 5)
     private List<Activity> activities;
 

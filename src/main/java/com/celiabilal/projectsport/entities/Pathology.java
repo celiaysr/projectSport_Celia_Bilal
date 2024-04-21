@@ -15,10 +15,10 @@ public class Pathology {
     @Column(name = "name")
     private String name;
 
-    @ManyToMany(mappedBy = "pathology", targetEntity = User.class)
+    @ManyToMany(mappedBy = "pathologies", targetEntity = User.class)
     private List<User> users;
 
-    @ManyToMany(mappedBy = "pathology", targetEntity = Activity.class)
+    @ManyToMany(mappedBy = "pathologies", targetEntity = Activity.class)
     private List<Activity> activities;
 
     public Pathology(){}

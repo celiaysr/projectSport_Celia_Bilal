@@ -15,7 +15,7 @@ public class Genre {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "genre", targetEntity = User.class)
+    @OneToMany(mappedBy = "genre", cascade = CascadeType.ALL)
     private List<User> users;
 
     public Genre(){}

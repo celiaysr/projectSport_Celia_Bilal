@@ -24,18 +24,18 @@ public class User {
     @Column(name = "age")
     private int age;
 
-    @ManyToOne
-    @JoinColumn(name="id")
+    @ManyToOne(targetEntity = Genre.class)
+    @JoinColumn(name="genre_id")
     private Genre genre;
 
-    @ManyToMany(mappedBy = "user", targetEntity = Pathology.class)
+    @ManyToMany(mappedBy = "users", targetEntity = Pathology.class)
     private List<Pathology> pathologies;
 
-    @OneToOne(targetEntity = Therapeutic.class)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Therapeutic therapeutic;
 
 
-    public User(){}
+
 
     public int getId() {
         return Id;
@@ -101,3 +101,4 @@ public class User {
         this.therapeutic = therapeutic;
     }
 }
+

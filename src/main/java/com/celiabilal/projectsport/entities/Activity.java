@@ -26,10 +26,10 @@ public class Activity {
     @Column(name = "address")
     private int address;
 
-    @ManyToMany(mappedBy = "activity", targetEntity = Pathology.class)
+    @ManyToMany(mappedBy = "activities", targetEntity = Pathology.class)
     private List<Pathology> pathologies;
 
-    @ManyToMany(mappedBy = "activity", targetEntity = Therapeutic.class)
+    @ManyToMany(mappedBy = "activities", targetEntity = Therapeutic.class)
     private List<Therapeutic> therapeutics;
 
     public Activity(){}
