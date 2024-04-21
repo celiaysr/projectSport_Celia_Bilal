@@ -15,6 +15,10 @@ public class Pathology {
     @Column(name = "name")
     private String name;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
 
     public Pathology(){}
 
@@ -22,7 +26,8 @@ public class Pathology {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(int id)
+    {
         this.id = id;
     }
 

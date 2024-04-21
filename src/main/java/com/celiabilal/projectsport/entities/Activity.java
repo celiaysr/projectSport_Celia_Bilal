@@ -12,6 +12,13 @@ public class Activity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @ManyToMany(mappedBy = "activities")
+    private List<Therapeutic> therapeutics;
+
+    @ManyToOne
+    @JoinColumn(name = "discipline_id")
+    private Discipline discipline;
+
     @Column(name = "name")
     private String name;
 

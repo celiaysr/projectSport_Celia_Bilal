@@ -14,6 +14,23 @@ public class Therapeutic {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToMany
+    @JoinTable(
+            name = "therapeutic_activity",
+            joinColumns = @JoinColumn(name = "therapeutic_id"),
+            inverseJoinColumns = @JoinColumn(name = "activity_id")
+    )
+    private List<Activity> activities;
+
+
+    public User getUser() {
+        return user;
+    }
+
     @Column(name = "rating", nullable = true)
     private int rating;
 

@@ -15,6 +15,9 @@ public class Discipline {
     @Column(name = "name")
     private String name;
 
+    @OneToMany(mappedBy = "discipline")
+    private List<Activity> activities;
+
 
     public Discipline(){}
 

@@ -24,6 +24,27 @@ public class User {
     @Column(name = "age")
     private int age;
 
+    @OneToMany(mappedBy = "user")
+    private List<Therapeutic> therapeutics;
+
+    @ManyToOne
+    @JoinColumn(name = "genre_id")
+    private Genre genre;
+
+    @OneToMany(mappedBy = "user")
+    private List<Pathology> pathologies;
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public List<Therapeutic> getTherapeutics() {
+        return therapeutics;
+    }
+
+    public void setTherapeutics(List<Therapeutic> therapeutics) {
+        this.therapeutics = therapeutics;
+    }
 
     public int getId() {
         return Id;
