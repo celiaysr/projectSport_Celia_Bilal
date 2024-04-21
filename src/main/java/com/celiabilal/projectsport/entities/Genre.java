@@ -15,9 +15,6 @@ public class Genre {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "genre", cascade = CascadeType.ALL)
-    private List<User> users;
-
     public Genre(){}
 
     public int getId() {
@@ -36,11 +33,4 @@ public class Genre {
         this.name = name;
     }
 
-    public List<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(List<User> users) {
-        this.users = users;
-    }
 }

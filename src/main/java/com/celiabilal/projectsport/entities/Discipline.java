@@ -15,8 +15,6 @@ public class Discipline {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "discipline", targetEntity = Activity.class)
-    private List<Activity> activities;
 
     public Discipline(){}
 
@@ -34,13 +32,5 @@ public class Discipline {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public List<Activity> getActivities() {
-        return activities;
-    }
-
-    public void setActivities(List<Activity> activities) {
-        this.activities = activities;
     }
 }

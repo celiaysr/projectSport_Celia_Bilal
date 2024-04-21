@@ -14,14 +14,6 @@ public class Therapeutic {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @OneToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-
-    @ManyToMany(mappedBy = "therapeutics",targetEntity = Activity.class)
-    @Size(max = 5)
-    private List<Activity> activities;
-
     @Column(name = "rating", nullable = true)
     private int rating;
 
@@ -35,21 +27,6 @@ public class Therapeutic {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public List<Activity> getActivities() {
-        return activities;
-    }
-
-    public void setActivities(List<Activity> activities) {
-        this.activities = activities;
-    }
 
     public int getRating() {
         return rating;

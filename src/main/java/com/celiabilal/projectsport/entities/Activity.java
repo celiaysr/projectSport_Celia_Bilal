@@ -18,19 +18,8 @@ public class Activity {
     @Column(name = "description")
     private String description;
 
-
-    @ManyToOne(targetEntity = Discipline.class)
-    @JoinColumn(name="id")
-    private Discipline discipline;
-
     @Column(name = "address")
     private int address;
-
-    @ManyToMany(mappedBy = "activities", targetEntity = Pathology.class)
-    private List<Pathology> pathologies;
-
-    @ManyToMany(mappedBy = "activities", targetEntity = Therapeutic.class)
-    private List<Therapeutic> therapeutics;
 
     public Activity(){}
 
@@ -58,13 +47,6 @@ public class Activity {
         this.description = description;
     }
 
-    public Discipline getDiscipline() {
-        return discipline;
-    }
-
-    public void setDiscipline(Discipline discipline) {
-        this.discipline = discipline;
-    }
 
     public int getAddress() {
         return address;
@@ -72,21 +54,5 @@ public class Activity {
 
     public void setAddress(int address) {
         this.address = address;
-    }
-
-    public List<Pathology> getPathologies() {
-        return pathologies;
-    }
-
-    public void setPathologies(List<Pathology> pathologies) {
-        this.pathologies = pathologies;
-    }
-
-    public List<Therapeutic> getTherapeutics() {
-        return therapeutics;
-    }
-
-    public void setTherapeutics(List<Therapeutic> therapeutics) {
-        this.therapeutics = therapeutics;
     }
 }

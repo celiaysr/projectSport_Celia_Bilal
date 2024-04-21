@@ -15,11 +15,6 @@ public class Pathology {
     @Column(name = "name")
     private String name;
 
-    @ManyToMany(mappedBy = "pathologies", targetEntity = User.class)
-    private List<User> users;
-
-    @ManyToMany(mappedBy = "pathologies", targetEntity = Activity.class)
-    private List<Activity> activities;
 
     public Pathology(){}
 
@@ -39,19 +34,4 @@ public class Pathology {
         this.name = name;
     }
 
-    public List<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(List<User> users) {
-        this.users = users;
-    }
-
-    public List<Activity> getActivities() {
-        return activities;
-    }
-
-    public void setActivities(List<Activity> activities) {
-        this.activities = activities;
-    }
 }

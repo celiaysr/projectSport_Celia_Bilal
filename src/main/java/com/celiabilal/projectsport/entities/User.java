@@ -24,18 +24,6 @@ public class User {
     @Column(name = "age")
     private int age;
 
-    @ManyToOne(targetEntity = Genre.class)
-    @JoinColumn(name="genre_id")
-    private Genre genre;
-
-    @ManyToMany(mappedBy = "users", targetEntity = Pathology.class)
-    private List<Pathology> pathologies;
-
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private Therapeutic therapeutic;
-
-
-
 
     public int getId() {
         return Id;
@@ -77,28 +65,5 @@ public class User {
         this.age = age;
     }
 
-    public Genre getGenre() {
-        return genre;
-    }
-
-    public void setGenre(Genre genre) {
-        this.genre = genre;
-    }
-
-    public List<Pathology> getPathologies() {
-        return pathologies;
-    }
-
-    public void setPathologies(List<Pathology> pathologies) {
-        this.pathologies = pathologies;
-    }
-
-    public Therapeutic getTherapeutic() {
-        return therapeutic;
-    }
-
-    public void setTherapeutic(Therapeutic therapeutic) {
-        this.therapeutic = therapeutic;
-    }
 }
 
