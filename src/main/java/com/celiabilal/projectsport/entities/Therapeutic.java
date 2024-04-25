@@ -1,7 +1,6 @@
 package com.celiabilal.projectsport.entities;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Size;
 import org.springframework.boot.convert.DataSizeUnit;
 
 import java.util.List;

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 //@EntityScan(basePackages = {"com.celiabilal.projectsport.entities"})  // force scan JPA entities
-@ComponentScan(basePackages = {"com.celiabilal.projectsport.repositories", "com.celiabilal.projectsport.controller"})
+@ComponentScan(basePackages = {"com.celiabilal.projectsport.repositories", "com.celiabilal.projectsport.controller", "com.celiabilal.projectsport.services", "com.celiabilal.projectsport.security"})
 public class ProjectSportApplication {
 
     public static void main(String[] args) {

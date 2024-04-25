@@ -6,51 +6,41 @@
     <form action="/register" method="post" class="border p-4 mx-auto" style="max-width: 400px;">
         <div class="mb-3">
             <label for="surname" class="form-label">Nom :</label>
-            <input type="text" id="surname" name="surname" class="form-control" required>
+            <input type="text" id="surname" th:field="${user.surname}" class="form-control" required>
         </div>
         <div class="mb-3">
             <label for="name" class="form-label">Prénom :</label>
-            <input type="text" id="name" name="name" class="form-control" required>
+            <input type="text" id="name" th:field="${user.name}" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label for="mail" class="form-label">Adresse mail :</label>
-            <input type="email" id="mail" name="mail" class="form-control" required>
+            <label for="username" class="form-label">Nom d'utilisateur :</label>
+            <input type="text" id="username" th:field="${user.username}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Adresse mail :</label>
+            <input type="email" id="email" th:field="${user.email}" class="form-control" required>
         </div>
         <div class="mb-3">
             <label for="age" class="form-label"> Âge :</label>
-            <input type="number" id="age" name="age" min="18" max="120" required>
+            <input type="number" id="age" th:field="${user.age}" min="18" max="120" class="form-control" required>
         </div>
         <div class="mb-3">
             <label for="genre">Genre :</label>
-            <select class="form-select" id="genre" name="genre">
-                <option value="femme">Femme</option>
-                <option value="homme">Homme</option>
+            <select class="form-select" id="genre" th:field="${user.genre}">
+                <option th:each="genre : ${genres}" th:value="${genre.id}" th:text="${genre.name}"></option>
             </select>
         </div>
+
         <div class="mb-3">
             <label for="password" class="form-label">Mot de passe :</label>
-            <input type="password" id="password" name="password" class="form-control" required>
+            <input type="password" id="password" th:field="${user.password}" class="form-control" required>
         </div>
-        <div class="mb-3">
-            <label for="passwordAConfirmer" class="form-label">Confirmer le mot de passe :</label>
-            <input type="password" id="passwordAConfirmer" name="passwordAConfirmer" class="form-control" required>
-        </div>
+
         <div class="text-center">
             <button type="submit" class="btn btnColorTheme">S'inscrire</button>
         </div>
     </form>
 
-    <script> //confirmation du mdp à l'identique
-        document.getElementById("signupForm").addEventListener("submit", function(event) {
-            var password = document.getElementById("password").value;
-            var passwordAConfirmer = document.getElementById("passwordAConfirmer").value;
-
-            if (password !== passwordAConfirmer) {
-                alert("Les mots de passe ne correspondent pas !");
-                event.preventDefault();
-            }
-        });
-    </script>
 
 </div>
 <br>
