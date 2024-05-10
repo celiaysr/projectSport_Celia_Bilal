@@ -1,0 +1,50 @@
+<div th:replace="fragment/index"></div>
+<br>
+<br>
+<div class="container">
+    <h2 class="text-center mb-4">Inscription</h2>
+    <form action="/register" method="post" class="border p-4 mx-auto" style="max-width: 400px;">
+        <div class="mb-3">
+            <label for="surname" class="form-label">Nom :</label>
+            <input type="text" id="surname" th:field="${user.surname}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Prénom :</label>
+            <input type="text" id="name" th:field="${user.name}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="username" class="form-label">Nom d'utilisateur :</label>
+            <input type="text" id="username" th:field="${user.username}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Adresse mail :</label>
+            <input type="email" id="email" th:field="${user.email}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label"> Âge :</label>
+            <input type="number" id="age" th:field="${user.age}" min="18" max="120" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="genre">Genre :</label>
+            <select class="form-select" id="genre" th:field="${user.genre}">
+                <option th:each="genre : ${genres}" th:value="${genre.id}" th:text="${genre.name}"></option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Mot de passe :</label>
+            <input type="password" id="password" th:field="${user.password}" class="form-control" required>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btnColorTheme">S'inscrire</button>
+        </div>
+    </form>
+
+
+</div>
+<br>
+<br>
+<div class="container">
+    <div th:replace="fragment/footer"></div>
+</div>

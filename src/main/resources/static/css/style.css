@@ -1,0 +1,65 @@
+.navbar-nav > li {
+    margin-right: 15px;
+}
+
+.navbar.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: #417c51 !important;
+}
+.homeBoxBackgroundColor{
+    background-color: #417c51;
+}
+
+.btn.btnColorTheme {
+    background: #417c51;
+}
+
+footer {
+    position: absolute;
+}
+.navbar-brand img {
+    border-radius: 50%; /* logo rond */
+    width: 60px; /* largeur du logo */
+    height: 60px; /* hauteur du logo */
+    margin-right: 15px; /* espace entre le logo et les items du navbar */
+}
+
+.text-bg {
+    border-radius: 15px; /* Arrondit les coins du div de la page d'accueil */
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+
+.bg-image {
+    background-image: url('../images/home.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.home-dv{
+    width: 80%;
+    height: 300px;
+    border-radius: 21px 21px 0 0;
+}
+
+#imgAspiration{
+    background-image: url('../images/aspirations.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#imgService{
+    background-image: url('../images/services.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#imgActivities{
+    background-image: url('../images/activities.jpg');
+    background-size: cover;
+    background-position: center;
+}
